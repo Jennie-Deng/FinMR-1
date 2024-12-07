@@ -1,6 +1,6 @@
 # FinMR: A Novel Knowledge-Intensive Multimodal Reasoning Benchmark in Financial Domain🔥 Dataset
 🌟 This repo includes an original implementation of Shuangyan Deng, Haizhou Peng, ChunHou Liu, Jiachen Xu 
-["FinMR: A Novel Knowledge-Intensive Multimodal Reasoning Benchmark in Financial Domain"](https://arxiv.org), , which contains both evaluation code and data for the **FinMR** benchmark.
+["FinMR: A Novel Knowledge-Intensive Multimodal Reasoning Benchmark in Financial Domain"](https://arxiv.org), which contains both evaluation code and data for the **FinMR** benchmark.
 
 [[🌐 Homepage]] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/aminous1/FinMR)]   [[📖 ArXiv Paper](https://arxiv.org)]
 
@@ -8,11 +8,11 @@
 
 ## 📖 Introduction
 
-This project introduces an innovative approach to enhance QA systems in financial reasoning tasks through the integration of a reflection module and error log. We apply this method to a Financial Math Reasoning dataset, which features multimodal reasoning challenges. Our system retrieves past errors, provides corrective feedback, and stores mistakes for long-term improvement. The experiments show significant gains in reasoning accuracy, particularly when dealing with complex financial questions.
+This project introduces an innovative approach to enhance QA systems in financial reasoning tasks through the integration of a reflection module and error log （Negative Example Database）. We apply this method to a Financial Math Reasoning and Expertise Reasoning dataset, which features multimodal reasoning challenges. Our system retrieves past errors, provides corrective feedback, and stores mistakes for long-term improvement. The experiments show significant gains in reasoning accuracy, particularly when dealing with complex financial questions.
 
 ![FinMR schematics](https://img520.com/MBZ94b.png)
 **Figure**: *Illustrating a multimodal reasoning framework for answering questions step-by-step with iterative feedback. 
-The system takes multimodal inputs (text and images) and generates reasoning steps along with an answer inference. 
+The system takes multimodal inputs (text and images), generating reasoning steps and an answer inference. 
 If the output is correct, the reasoning and answer are accepted. If incorrect, the process involves rationale step 
 correction via manual annotation and error analysis. Feedback generation introduces negative examples and AI feedback to 
 improve reasoning. The improved insights are used for in-context learning, enhancing the reasoning steps and answer inference. 
@@ -71,7 +71,7 @@ Make sure that you have Anaconda installed. If not - follow this [miniconda inst
 
 To run Progressive Prompts code on GPU, make sure that you have a CUDA capable GPU and the [drivers](https://www.nvidia.com/download/index.aspx?lang=en-us) for your GPU are up to date. In our implementation, we used and CUDA 12.1.
 
-You can re-create our conda enviroment from ```environment.yaml``` file:
+You can re-create our conda environment from ```environment.yaml``` file:
 
 ```bash
 cd FinMR
